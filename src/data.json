@@ -1,0 +1,37 @@
+[
+	{
+		"id": 1,
+		"name": "Rohit",
+		"username": "rohitdesai",
+		"password": "123",
+		"maps": {
+			"0": {
+				"location": "India",
+				"latitude": 20.5937,
+				"longitude": 78.9629,
+				"imgUrl": "../photo",
+				"desc": "test 111"
+			},
+			"1": {
+				"location": "Singapore",
+				"latitude": 1.3521,
+				"longitude": 103.8198,
+				"imgUrl": "../photo",
+				"desc": "test 111"
+			}
+		}
+	},
+	{
+		"id": 2,
+		"name": "Rakesh",
+		"username": "rakesh",
+		"password": "000",
+		"maps": {
+			"location": "Thailand",
+			"latitude": 15.8700,
+			"longitude": 100.9925,
+			"imgUrl": "../photo",
+			"desc": "test 111"
+		}
+	}
+]
