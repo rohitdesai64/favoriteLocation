@@ -4,13 +4,13 @@
 		"name": "Rohit",
 		"username": "rohitdesai",
 		"password": "123",
+		"addedOn": 1578470096000,
 		"maps": [
 			{
 				"id": 11,
 				"location": "India",
 				"latitude": 20.5937,
 				"longitude": 78.9629,
-				"imgUrl": "../assets/img/india",
 				"desc": "India, officially the Republic of India, is a country in South Asia. It is the seventh-largest country by area, the second-most populous country, and the most populous democracy in the world."
 			},
 			{
@@ -18,7 +18,6 @@
 				"location": "Singapore",
 				"latitude": 1.3521,
 				"longitude": 103.8198,
-				"imgUrl": "../photo",
 				"desc": "Singapore, an island city-state off southern Malaysia, is a global financial center with a tropical climate and multicultural population. Its colonial core centers on the Padang, a cricket field since the 1830s and now flanked by grand buildings such as City Hall, with its 18 Corinthian columns. In Singapore's circa-1820 Chinatown stands the red-and-gold Buddha Tooth Relic Temple, said to house one of Buddha's teeth."
 			},
 			{
@@ -26,7 +25,6 @@
 				"location": "Dubai",
 				"latitude": 25.2048,
 				"longitude": 55.2708,
-				"imgUrl": "../photo",
 				"desc": "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks."
 			}
 		]
@@ -36,13 +34,13 @@
 		"name": "Rakesh",
 		"username": "rakesh",
 		"password": "000",
+		"addedOn": 1578223466000,
 		"maps": [
 			{
 			"id": 21,
 			"location": "Thailand",
 			"latitude": 15.8700,
 			"longitude": 100.9925,
-			"imgUrl": "../photo",
 			"desc": "Thailand is a Southeast Asian country. It's known for tropical beaches, opulent royal palaces, ancient ruins and ornate temples displaying figures of Buddha. In Bangkok, the capital, an ultramodern cityscape rises next to quiet canalside communities and the iconic temples of Wat Arun, Wat Pho and the Emerald Buddha Temple (Wat Phra Kaew). Nearby beach resorts include bustling Pattaya and fashionable Hua Hin."
 		},
 		{
@@ -50,7 +48,6 @@
 			"location": "Sri Lanka",
 			"latitude": 7.8731,
 			"longitude": 80.7718,
-			"imgUrl": "../photo",
 			"desc": "Sri Lanka, officially the Democratic Socialist Republic of Sri Lanka, is an island country in South Asia, located in the Indian Ocean to the southwest of the Bay of Bengal and to the southeast of the Arabian Sea"
 		}
 	]

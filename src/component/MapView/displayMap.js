@@ -1,6 +1,4 @@
 import React from "react";
-import { Grid, Button } from "@material-ui/core";
-import Header from "../Header";
 import { compose, withProps } from "recompose";
 import {
   withScriptjs,

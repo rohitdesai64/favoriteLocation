@@ -7,7 +7,7 @@ export default {
         padding: 20
     },
     loginBox: {
-        padding: '30px 50px',
+        padding: 30,
         backgroundColor: '#fff',
         width: 300
     },
