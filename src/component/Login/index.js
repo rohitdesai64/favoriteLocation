@@ -10,6 +10,7 @@ import styles from "./Login.style";
 import Header from "../Header";
 import {connect} from "react-redux"
 import { dispatch } from "store"
+import loggedInUser from "../../reducers/loggedInUser"
 
 class Login extends React.Component {
   constructor(props) {
@@ -45,8 +46,8 @@ class Login extends React.Component {
         obj.username === this.state.username &&
         obj.password === this.state.password
       ) {
-        console.log("Logged ----")
-        // dispatch({ type: 'LOGGED_IN', payload: obj.username })
+        console.log("Logged ----", obj)
+        this.props.dispatch(loggedInUser({ type: "LOGGED_IN", eventData: obj }))
         return (window.location = "mapView");
       }
     }

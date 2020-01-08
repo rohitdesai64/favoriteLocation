@@ -9,6 +9,7 @@ import IndiaImg from "../../assets/img/india.jpg"
 import SingaporeImg from "../../assets/img/singapore.jpg"
 import SrilankaImg from "../../assets/img/srilanka.jpeg"
 import ThailandImg from "../../assets/img/thailand.jpeg"
+// import AllRegesteredList from "./AllRegesteredList";
 
 class MapView extends React.Component {
   state = {
@@ -16,6 +17,10 @@ class MapView extends React.Component {
     dialogUser: [],
     dialogImg: null
   };
+
+  componentDidMount() {
+    console.log("loggedInUser ------- ", this.props.loggedInUser)
+  }
 
   componentDidUpdate() {
     if(this.state.locationDialog && this.state.dialogImg == null) {
@@ -54,6 +59,9 @@ class MapView extends React.Component {
     return (
       <>
         <Header title="Map View" />
+
+        {/* <AllRegesteredList openDrawer={true} /> */}
+
         <Grid container direction="column" alignItems="center" justify="center">
         <Typography variant="h4">  Map View </Typography>
          

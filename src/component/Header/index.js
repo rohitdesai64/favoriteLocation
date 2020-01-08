@@ -6,10 +6,13 @@ import {
   withStyles,
   Grid,
   TextField,
-  Button
+  Button,
+  IconButton
 } from "@material-ui/core";
 import styles from "./Header.style";
 import AddDialog from "../Dialog";
+import AllRegesteredList from "../MapView/AllRegesteredList";
+import MenuIcon from '@material-ui/icons/Menu';
 
 class Header extends React.Component {
   constructor() {
@@ -18,7 +21,8 @@ class Header extends React.Component {
       signUpDialog: false,
       name: "",
       username: "",
-      password: ""
+      password: "",
+      openDrawer: false
     };
   }
 
@@ -91,6 +95,10 @@ class Header extends React.Component {
     return (
       <AppBar>
         <Toolbar>
+          <IconButton onClick={() => {this.setState({ openDrawer: !this.state.openDrawer })}}>
+            <MenuIcon />
+          </IconButton>
+
           <Typography variant="h6" className={classes.grow}>
             {this.props.title}
           </Typography>
@@ -115,6 +123,8 @@ class Header extends React.Component {
             </>
           )}
         </Toolbar>
+
+        <AllRegesteredList openDrawer={this.state.openDrawer} closeDrawer={() => {this.setState({ openDrawer: true })}} />
       </AppBar>
     );
   }
