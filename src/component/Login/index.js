@@ -46,7 +46,7 @@ class Login extends React.Component {
         obj.password === this.state.password
       ) {
         console.log("Logged ----")
-        dispatch({ type: 'LOGGED_IN', payload: obj.username })
+        // dispatch({ type: 'LOGGED_IN', payload: obj.username })
         return (window.location = "mapView");
       }
     }
