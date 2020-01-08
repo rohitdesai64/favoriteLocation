@@ -7,7 +7,7 @@ import DisplayMap from "./DisplayMap";
 import DubaiImg from "../../assets/img/dubai.jpg";
 import IndiaImg from "../../assets/img/india.jpg";
 import SingaporeImg from "../../assets/img/singapore.jpg";
-import SrilankaImg from "../../assets/img/srilanka.jpeg";
+import SrilankaImg from "../../assets/img/srilanka.jpg";
 import ThailandImg from "../../assets/img/thailand.jpeg";
 
 class MapView extends React.Component {
