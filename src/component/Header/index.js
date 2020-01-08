@@ -22,7 +22,8 @@ class Header extends React.Component {
       name: "",
       username: "",
       password: "",
-      openDrawer: false
+      openDrawer: false,
+      validateForm: false
     };
   }
 
@@ -36,17 +37,21 @@ class Header extends React.Component {
 
   handleInput = value => e => {
     this.setState({ [value]: e.target.value });
+    this.validateInput(value, e.target.value)
   };
 
+  validateInput = (field, value) => {
+    // check if all field are entered
+    if(this.state.name !== "" && this.state.username !== "" && this.state.password !== "")
+      this.setState({ validateForm: true })
+    else this.setState({ validateForm: false })
+  }
+
   userSignUp = () => {
-    console.log(
-      "Name==",
-      this.state.name,
-      "Username=",
-      this.state.username,
-      "Password=",
-      this.state.password
-    );
+    this.validateInput()
+    if(this.state.validateForm)
+      alert(" Regestered Successfully")
+    else alert("Please fill details")
   };
 
   render() {
@@ -60,16 +65,17 @@ class Header extends React.Component {
     const signUpForm = (
       <>
         <Grid container alignItems="center" justify="center">
-          <Grid item xs={8} className={classes.padd15}>
+          <Grid item xs={12} md={8} className={classes.padd15}>
             <TextField
               required
               label="Name"
               value={this.state.name}
               onChange={this.handleInput("name")}
               className={classes.fullWidth}
+              fullWidth
             />
           </Grid>
-          <Grid item xs={8} className={classes.padd15}>
+          <Grid item xs={12} md={8} className={classes.padd15}>
             <TextField
               required
               label="Username"
@@ -78,7 +84,7 @@ class Header extends React.Component {
               className={classes.fullWidth}
             />
           </Grid>
-          <Grid item xs={8} className={classes.padd15}>
+          <Grid item xs={12} md={8} className={classes.padd15}>
             <TextField
               required
               type="password"
@@ -95,6 +101,7 @@ class Header extends React.Component {
     return (
       <AppBar>
         <Toolbar>
+          {/* on click open drawer to display all users */}
           <IconButton onClick={() => {this.setState({ openDrawer: !this.state.openDrawer })}}>
             <MenuIcon />
           </IconButton>
@@ -103,7 +110,7 @@ class Header extends React.Component {
             {this.props.title}
           </Typography>
 
-          {displaySignUpButton && (
+          {displaySignUpButton ? (
             <>
               <Button
                 variant="contained"
@@ -121,6 +128,11 @@ class Header extends React.Component {
                 maxWidth={"xs"}
               />
             </>
+          ) : (
+            // Sign out buttom is visible only for logged in user
+            <Button variant="contained" color="secondary" onClick={() => {window.location = "/"}}>
+              Sign Out
+            </Button>
           )}
         </Toolbar>
 

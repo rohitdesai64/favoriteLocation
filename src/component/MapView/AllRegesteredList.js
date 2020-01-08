@@ -1,7 +1,6 @@
 import React from "react";
 import {
   Grid,
-  Button,
   Typography,
   Drawer,
   IconButton,
@@ -23,9 +22,6 @@ class AllRegesteredList extends React.Component {
   state = {
     open: false
   };
-  componentDidMount() {
-    console.log("loggedInUser ------- ", this.props.loggedInUser);
-  }
 
   componentDidUpdate(prevProps) {
     if (prevProps.openDrawer !== this.props.openDrawer)
@@ -118,7 +114,6 @@ class AllRegesteredList extends React.Component {
 function mapState(state) {
   return {
     allUsers: state.allUsers
-    // loggedInUser: state.loggedInUser
   };
 }
 

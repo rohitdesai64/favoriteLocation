@@ -9,13 +9,10 @@ import {
 import styles from "./Login.style";
 import Header from "../Header";
 import {connect} from "react-redux"
-import { dispatch } from "store"
-import loggedInUser from "../../reducers/loggedInUser"
-
+// import loggedInUser from "../../reducers/loggedInUser"
 class Login extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       userDetails: [],
       username: "",
@@ -23,7 +20,6 @@ class Login extends React.Component {
       loginValue: "Test",
       fieldVal: ""
     };
-    // this.componentDidMount.bind(this);
   }
 
   inputText = data => event => {
@@ -31,8 +27,6 @@ class Login extends React.Component {
   };
 
   componentDidMount() {
-    console.log(" Login ******* ", this.props.allUsers)
-    // let userData = require("../../data.json");
     this.setState({ userDetails: this.props.allUsers });
   }
 
@@ -40,15 +34,15 @@ class Login extends React.Component {
     const userDetails = this.props.allUsers;
     event.preventDefault();
 
+    // check if user is registered
     for (var i = 0; i < userDetails.length; i++) {
       var obj = userDetails[i];
       if (
         obj.username === this.state.username &&
         obj.password === this.state.password
       ) {
-        console.log("Logged ----", obj)
-        this.props.dispatch(loggedInUser({ type: "LOGGED_IN", eventData: obj }))
-        return (window.location = "mapView");
+        this.props.dispatch({ type: "LOGGED_IN", payload: {eventData: obj} })
+        return (window.location = "mapView/:id="+ obj.id);
       }
     }
     return alert("Wrong Username/Password");
@@ -101,5 +95,6 @@ function mapStateToProps(state) {
   }
 }
 
+// const LoginPage = connect(mapStateToProps)(withStyles(styles)(Login))
+// export default React.forwardRef((props, ref) => <LoginPage {...props} innerRef={ref}  />)
 export default connect(mapStateToProps)(withStyles(styles)(Login))
-// export default withStyles(styles)(Login);
