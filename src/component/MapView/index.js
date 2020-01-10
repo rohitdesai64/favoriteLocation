@@ -3,7 +3,7 @@ import { Grid, Button, Typography } from "@material-ui/core";
 import Header from "../Header";
 import { connect } from "react-redux";
 import AddDialog from "../Dialog";
-import DisplayMap from "./DisplayMap";
+import DisplayMap from "./displayMap";
 import DubaiImg from "../../assets/img/dubai.jpg";
 import IndiaImg from "../../assets/img/india.jpg";
 import SingaporeImg from "../../assets/img/singapore.jpg";
